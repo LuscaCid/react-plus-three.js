@@ -1,0 +1,3 @@
+at this project i will use the vite to create the setup for react to make all the application and tailwind css for agilize this project make.
+
+
