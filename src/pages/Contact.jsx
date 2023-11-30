@@ -6,6 +6,7 @@ import { Canvas } from "@react-three/fiber"
 import Fox from '../models/Fox'
 import Loader from '../components/Loader'
 import useAlert from "../hooks/useAlert"
+import Alert from '../components/Alert'
 
 const Contact = () => {
   const formRef = useRef()
@@ -33,7 +34,9 @@ const Contact = () => {
       
     ).then(() => {
       setIsLoading(false)
+      showAlert({ show : true, text : "message sent successfully", type : "success"})
       setTimeout(() => {
+        hideAlert()
         setCurrentAnimation('idle')
         setForm({name : '', email : '', message : ''})
       }, [3000]);
@@ -41,6 +44,7 @@ const Contact = () => {
       setCurrentAnimation('idle')
       setIsLoading(false)
       console.log(error)
+      showAlert({ show : true, text : "i didtn receive your message", type : "danger"})
     })
   }
   
@@ -54,6 +58,7 @@ const Contact = () => {
     <section 
     className='relative flex lg:flex-row flex-col max-container'
     >
+    {alert.show && <Alert {...alert}/>}
       <div className='flex-10 min-w-[50%] flex flex-col'>
         <h1 className='head-text'>
           Get in Touch
