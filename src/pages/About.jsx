@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section className='max-container flex flex-col align-center justify-center ' >
       <h1 className='head-text'>Hello, I'm  
-      <span className='blue-gradient_text font-semibold drop-shadow'> *Lucas</span>
+      <span className='blue-gradient_text font-semibold drop-shadow'> Lucas Cid</span>
       </h1>
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
@@ -51,6 +51,13 @@ const About = () => {
                     />
                   </div>
                 }
+                iconStyle={{background :element.iconBg}}
+                contentStyle={{
+                  borderBottom : "8px",
+                  borderStyle: 'solid',
+                  borderBottomColor: element.iconBg,
+                  boxShadow : 'none'
+                }}
                 >
                   <div>
                     <h3 className='text-black text-x1 font-poppins font-semibold'>
