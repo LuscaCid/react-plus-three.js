@@ -9,16 +9,20 @@ Title: Fox
 import React, { useEffect, useRef } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 
-import scne from '../assets/3d/fox.glb'
+import scene from '../assets/3d/fox.glb'
 
-export function Model({currentAnimation, ...props}) {
+function Fox({currentAnimation, ...props}) {
   const group = useRef();
-  const { nodes, materials, animations } = useGLTF("/fox.glb");
+  const { nodes, materials, animations } = useGLTF(scene);
   const { actions } = useAnimations(animations, group);
-
+ 
   useEffect(() => {
+    Object.values(actions).forEach((action) => action.stop())
 
-  }, [action, currentAnimation])
+    if(actions[currentAnimation]){
+      actions[currentAnimation].play()
+    }
+  }, [actions, currentAnimation])
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -59,4 +63,4 @@ export function Model({currentAnimation, ...props}) {
   );
 }
 
-useGLTF.preload("/fox.glb");
+export default Fox
