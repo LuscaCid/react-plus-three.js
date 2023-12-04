@@ -106,7 +106,7 @@ export const experiences = [
     {
         title: "Fullstack freelancer developer",
         company_name: "Workana",
-        icon: contact,
+        icon: react,
         iconBg: "#a2d2ff",
         date: "Jan 2021 - Feb 2022",
         points: [
@@ -120,7 +120,7 @@ export const experiences = [
     {
         title: "Intern in Santa Luzia",
         company_name: "Hospital Santa Luzia",
-        icon: contact,
+        icon: typescript,
         iconBg: "#a2d2ff",
         date: "March 2023 - Present",
         points: [
