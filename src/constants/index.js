@@ -108,7 +108,7 @@ export const experiences = [
         company_name: "Workana",
         icon: react,
         iconBg: "#a2d2ff",
-        date: "Jan 2021 - Feb 2022",
+        date: "Jun 2023 - Nov 2023",
         points: [
             "I developed innovative web applications, collaborating with global clients, through the workana platform as a fullstack freelancer.",
             "I faced stimulating challenges, balancing frontend and backend skills to create efficient sikucoes for various projects at workana.",
