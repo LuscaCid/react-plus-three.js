@@ -91,55 +91,43 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#accbe1",
+        title: "Seller",
+        company_name: "His",
+        icon: contact,
+        iconBg: "#a2d2ff",
         date: "March 2020 - April 2021",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "I worked in the sales area of ​​the HIS store.",
+            "working with excellence in service to offer an excellent customer experience.",
+            "There were days when I served more than 3 clients at the same time, each part of my brain was allocated to a specific client.",
+            
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
-        iconBg: "#fbc3bc",
+        title: "Fullstack freelancer developer",
+        company_name: "Workana",
+        icon: contact,
+        iconBg: "#a2d2ff",
         date: "Jan 2021 - Feb 2022",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "I developed innovative web applications, collaborating with global clients, through the workana platform as a fullstack freelancer.",
+            "I faced stimulating challenges, balancing frontend and backend skills to create efficient sikucoes for various projects at workana.",
+            "I learned and grew professionally by adapting to different technologies and client requirements, delivering high-quality results as an independent fullstack developer",
+           
         ],
     },
+    
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
+        title: "Intern in Santa Luzia",
+        company_name: "Hospital Santa Luzia",
+        icon: contact,
         iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        date: "March 2023 - Present",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Contributed to the efficiency of the hospital environment by making administrative procedures faster.",
+            "I coordinate administrative tasks, keeping documentation organized and facilitating internal communication.",
+            "plays a crucial role in coordinating administrative activities, providing vital support to the medical team.",
+           
         ],
     },
 ];
