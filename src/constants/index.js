@@ -95,7 +95,7 @@ export const experiences = [
         company_name: "His",
         icon: contact,
         iconBg: "#a2d2ff",
-        date: "March 2020 - April 2021",
+        date: "november 2022 - jan 2023",
         points: [
             "I worked in the sales area of ​​the HIS store.",
             "working with excellence in service to offer an excellent customer experience.",
@@ -127,7 +127,7 @@ export const experiences = [
             "Contributed to the efficiency of the hospital environment by making administrative procedures faster.",
             "I coordinate administrative tasks, keeping documentation organized and facilitating internal communication.",
             "plays a crucial role in coordinating administrative activities, providing vital support to the medical team.",
-           
+            "I developed an automation project for the hospital, which consisted of using the python language in conjunction with html, css and js to create the graphical interface, I used pyautoGUI, pytesseract and flask."
         ],
     },
 ];
