@@ -68,6 +68,16 @@ export const skills = [
         type: "Backend",
     },
     {
+        imageUrl: nodejs,
+        name: "Fastify",
+        type: "Backend",
+    },
+    {
+        imageUrl: nodejs,
+        name: "Nest.js",
+        type: "Backend",
+    },
+    {
         imageUrl: react,
         name: "React",
         type: "Frontend",
@@ -123,19 +133,19 @@ export const experiences = [
         points: [
             "Contributed to the development and learning about build functional apps and grow as team.",
             "Learned to much and i created an strong QueryBuilder for the AdiantiFramework.",
+            "Working with PHP in a main enterprise MVC project called SIPEC.",
         ],
     },
      {
         title: "Junior developer",
         company_name: "W5i Tecnologia",
-        icon: typescript,
+        icon: react,
         iconBg: "#a2d2ff",
         date: "June 2024 - present",
         points: [
             "I build awassome applications to improve goverment management, deputy website transparency, and the Business Intelligence.",
             "For make the work more easy, i build an sgdb and code generator for a PHP framework called AdiantiFramework.",
-            "",
-            ""
+            "Building an strong learning with React, Electron, Typescript, React native for mobile development and, more!",
         ],
     },
 ];
@@ -159,12 +169,12 @@ export const socialLinks = [
 ];
 
 export const projects = [
-    {
-        iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'W5i Builder',
-        description: 'Developed a web and desktop application that generates code and organize your database table and relations, generate PHP and sql code.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+     {
+        iconUrl: nextjs,
+        theme: 'btn-back-pink',
+        name: 'Plune.app',
+        description: 'My beloved personal project that im working yet, its called Plune.app, his porpose is help management of enterprises workflows of forms with conditionals, its very different of all others applications in this segment.',
+        link: 'https://github.com/LuscaCid/plune.app',
     },
     {
         iconUrl: nextjs,
@@ -180,6 +190,13 @@ export const projects = [
         description: 'Developed another fullstack application that is reponsible for show news, notify the population about situations, secretariats, deputy mayor status, schedules...',
         link: 'https://w5i-gerenciador-sites.vercel.app/w5i-tecnologia-acesso-2025',
     },
+     {
+        iconUrl: pricewise,
+        theme: 'btn-back-red',
+        name: 'W5i Builder',
+        description: 'Developed a web and desktop application that generates code and organize your database table and relations, generate PHP and sql code. This project is closed, i cannot give the download link',
+        link: '/#',
+    },
     {
         iconUrl: nextjs,
         theme: 'btn-back-pink',
@@ -187,4 +204,5 @@ export const projects = [
         description: 'Built home page spotify for only train my css skills, simple, but special for me',
         link: 'https://spotfy-clone-seven.vercel.app/',
     }
+   
 ];
