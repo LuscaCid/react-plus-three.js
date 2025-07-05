@@ -35,7 +35,7 @@ const About = () => {
         <h3 className='subhead-text'>Work experience</h3>
         <div>
           <p className='mt-5 flex flex-col gap-3 text-slate-500'>
-          I still don't have experience in the area of ​​software development, I'm looking for my first job opportunity and I'm continuing my studies consistently to achieve this goal, I have a lot of experience with personal fullstack projects developed mostly just by me.
+          I have 3 years of experience in software development, I worked as a freelance developer, I worked in a team at W5i Tecnologia, always taking care to create structures that met needs in a dynamic way, ensuring clean code and simplicity of use and, above all, clarity. At the moment, I'm working on a personal project that is designed to manage flows within companies based on nodes with conditionals and beyond.
           </p>
         </div>
         <div className='mt-12 flex'>
