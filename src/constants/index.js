@@ -57,9 +57,6 @@ export const skills = [
         name: "JavaScript",
         type: "Frontend",
     },
-    
-    
-    
     {
         imageUrl: nextjs,
         name: "Next.js",
@@ -91,19 +88,6 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "Seller",
-        company_name: "His",
-        icon: contact,
-        iconBg: "#a2d2ff",
-        date: "november 2022 - jan 2023",
-        points: [
-            "I worked in the sales area of ​​the HIS store.",
-            "working with excellence in service to offer an excellent customer experience.",
-            "There were days when I served more than 3 clients at the same time, each part of my brain was allocated to a specific client.",
-            
-        ],
-    },
-    {
         title: "Fullstack freelancer developer",
         company_name: "Workana",
         icon: react,
@@ -122,12 +106,36 @@ export const experiences = [
         company_name: "Hospital Santa Luzia",
         icon: typescript,
         iconBg: "#a2d2ff",
-        date: "March 2023 - Present",
+        date: "March 2023 - march 2024",
         points: [
             "Contributed to the efficiency of the hospital environment by making administrative procedures faster.",
             "I coordinate administrative tasks, keeping documentation organized and facilitating internal communication.",
             "plays a crucial role in coordinating administrative activities, providing vital support to the medical team.",
             "I developed an automation project for the hospital, which consisted of using the python language in conjunction with html, css and js to create the graphical interface, I used pyautoGUI, pytesseract and flask."
+        ],
+    },
+      {
+        title: "Intership",
+        company_name: "W5i Tecnologia",
+        icon: typescript,
+        iconBg: "#a2d2ff",
+        date: "April 2024 - June 2024",
+        points: [
+            "Contributed to the development and learning about build functional apps and grow as team.",
+            "Learned to much and i created an strong QueryBuilder for the AdiantiFramework.",
+        ],
+    },
+     {
+        title: "Junior developer",
+        company_name: "W5i Tecnologia",
+        icon: typescript,
+        iconBg: "#a2d2ff",
+        date: "June 2024 - present",
+        points: [
+            "I build awassome applications to improve goverment management, deputy website transparency, and the Business Intelligence.",
+            "For make the work more easy, i build an sgdb and code generator for a PHP framework called AdiantiFramework.",
+            "",
+            ""
         ],
     },
 ];
@@ -141,12 +149,12 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/LuscaCid',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/lucas-cid/',
     }
 ];
 
@@ -154,43 +162,29 @@ export const projects = [
     {
         iconUrl: pricewise,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
+        name: 'W5i Builder',
+        description: 'Developed a web and desktop application that generates code and organize your database table and relations, generate PHP and sql code.',
         link: 'https://github.com/adrianhajdin/pricewise',
     },
     {
-        iconUrl: threads,
+        iconUrl: nextjs,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'Transparency Portal for cities',
+        description: 'Created a fullstack application for governments to show population all the transparency data.',
+        link: 'https://w5i-portal-transparencia-frontend.vercel.app/',
     },
     {
-        iconUrl: car,
+        iconUrl: nextjs,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
+        name: 'city ​​hall portal',
+        description: 'Developed another fullstack application that is reponsible for show news, notify the population about situations, secretariats, deputy mayor status, schedules...',
         link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
     },
     {
-        iconUrl: snapgram,
+        iconUrl: nextjs,
         theme: 'btn-back-pink',
         name: 'Full Stack Instagram Clone',
         description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
-    },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        link: 'https://w5i-gerenciador-sites.vercel.app/w5i-tecnologia-acesso-2025',
     }
 ];
