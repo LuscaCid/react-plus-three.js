@@ -178,13 +178,13 @@ export const projects = [
         theme: 'btn-back-blue',
         name: 'city ​​hall portal',
         description: 'Developed another fullstack application that is reponsible for show news, notify the population about situations, secretariats, deputy mayor status, schedules...',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        link: 'https://w5i-gerenciador-sites.vercel.app/w5i-tecnologia-acesso-2025',
     },
     {
         iconUrl: nextjs,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://w5i-gerenciador-sites.vercel.app/w5i-tecnologia-acesso-2025',
+        name: 'Styles spotify clone',
+        description: 'Built home page spotify for only train my css skills, simple, but special for me',
+        link: 'https://spotfy-clone-seven.vercel.app/',
     }
 ];
