@@ -145,7 +145,7 @@ export const experiences = [
       {
         title: "Intership",
         company_name: "W5i Tecnologia",
-        icon: nexts,
+        icon: nextjs,
         iconBg: "#a2d2ff",
         date: "April 2024 - June 2024",
         points: [
