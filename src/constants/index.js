@@ -1,4 +1,4 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { meta, shopify, starbucks, tesla, Docker, Fastify, Nest, Socket, Electron, PostgreSQL, MongoDB  } from "../assets/images";
 import {
     car,
     contact,
@@ -68,7 +68,7 @@ export const skills = [
         type: "Backend",
     },
     {
-        imageUrl: nodejs,
+        imageUrl: Fastify,
         name: "Fastify",
         type: "Backend",
     },
@@ -82,8 +82,26 @@ export const skills = [
         name: "React",
         type: "Frontend",
     },
-   
-   
+    {
+        imageUrl: Docker,
+        name: "Docker",
+        type: "Backend",
+    },
+    {
+        imageUrl: PostgreSQL,
+        name: "PostgreSQL",
+        type: "Backend",
+    },
+      {
+        imageUrl: MongoDB,
+        name: "MongoDB",
+        type: "Backend",
+    },
+      {
+        imageUrl: Socket,
+        name: "Socket.io",
+        type: "Backend",
+    },
     {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
@@ -127,7 +145,7 @@ export const experiences = [
       {
         title: "Intership",
         company_name: "W5i Tecnologia",
-        icon: typescript,
+        icon: nexts,
         iconBg: "#a2d2ff",
         date: "April 2024 - June 2024",
         points: [
@@ -139,7 +157,7 @@ export const experiences = [
      {
         title: "Junior developer",
         company_name: "W5i Tecnologia",
-        icon: react,
+        icon: Fastify,
         iconBg: "#a2d2ff",
         date: "June 2024 - present",
         points: [
@@ -170,14 +188,14 @@ export const socialLinks = [
 
 export const projects = [
      {
-        iconUrl: nextjs,
+        iconUrl: Electron,
         theme: 'btn-back-pink',
         name: 'Plune.app',
-        description: 'My beloved personal project that im working yet, its called Plune.app, his porpose is help management of enterprises workflows of forms with conditionals, its very different of all others applications in this segment.',
-        link: 'https://github.com/LuscaCid/plune.app',
+        description: 'My beloved personal project that im working, its called Plune.app, his porpose is help management of enterprises workflows of forms with conditionals, its very different of all others applications in this segment.',
+        link: 'https://github.com/LuscaCid/plune.app/releases',
     },
     {
-        iconUrl: nextjs,
+        iconUrl: react,
         theme: 'btn-back-green',
         name: 'Transparency Portal for cities',
         description: 'Created a fullstack application for governments to show population all the transparency data.',
@@ -191,7 +209,7 @@ export const projects = [
         link: 'https://w5i-gerenciador-sites.vercel.app/w5i-tecnologia-acesso-2025',
     },
      {
-        iconUrl: pricewise,
+        iconUrl: Electron,
         theme: 'btn-back-red',
         name: 'W5i Builder',
         description: 'Developed a web and desktop application that generates code and organize your database table and relations, generate PHP and sql code. This project is closed, i cannot give the download link',
