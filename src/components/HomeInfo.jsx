@@ -23,7 +23,7 @@ const HomeInfo = ({currentStage}) => {
     1 : (
       <h1 className='sm:text-x1 sm:leading-snug text-center neo-brutalism-blue py-3 px-5 text-white mx-4 '>Hello, <span className='font-semibold'>Lucas 👋</span>
       <br />
-      A software engineer from Brazil that loves programming.
+      A software engineer from Salvador, BA, Brazil that loves programming.
       </h1>
     ),
     2 : (
