@@ -208,12 +208,19 @@ export const projects = [
         description: 'Developed another fullstack application that is reponsible for show news, notify the population about situations, secretariats, deputy mayor status, schedules...',
         link: 'https://w5i-gerenciador-sites.vercel.app/w5i-tecnologia-acesso-2025',
     },
-     {
+    {
         iconUrl: Electron,
         theme: 'btn-back-red',
         name: 'W5i Builder',
         description: 'Developed a web and desktop application that generates code and organize your database table and relations, generate PHP and sql code. This project is closed, i cannot give the download link',
-        link: '/#',
+        link: 'http://167.71.254.213:9000/w5i-builder/uploads%2FW5i%20Builder-Win-0.2.3-Setup.exe',
+    },
+    {
+        iconUrl: react,
+        theme: 'btn-back-red',
+        name: 'BI',
+        description: 'Me and another collaborator developed this web application that is a dashboard from another biggest application with charts, a lot of condensed information in shape of charts, tables, and more...',
+        link: 'https://bi.w5i.com.br',
     },
     {
         iconUrl: nextjs,
