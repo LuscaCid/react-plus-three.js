@@ -1,13 +1,206 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src//assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lucas Cid</title>
+
+    <title>Lucas Cid — Software Developer</title>
+    <meta
+      name="description"
+      content="Software developer em Salvador, BA. Angular, .NET, React e Python — criador do Plune (automação de processos) e do MyWedding, com arquitetura multi-tenant em produção."
+    />
+    <link rel="canonical" href="https://lucascid.com.br/" />
+    <meta name="author" content="Lucas Cid" />
+    <meta name="theme-color" content="#f6f7fc" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Lucas Cid" />
+    <meta property="og:title" content="Lucas Cid — Software Developer" />
+    <meta
+      property="og:description"
+      content="Angular, .NET, React e Python. Criador do Plune e do MyWedding — dois SaaS multi-tenant em produção."
+    />
+    <meta property="og:url" content="https://lucascid.com.br/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Lucas Cid — Software Developer" />
+    <meta
+      name="twitter:description"
+      content="Angular, .NET, React e Python. Criador do Plune e do MyWedding."
+    />
+
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Lucas Cid",
+        "url": "https://lucascid.com.br",
+        "jobTitle": "Software Developer",
+        "email": "mailto:lucasfelipaaa@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Salvador",
+          "addressRegion": "BA",
+          "addressCountry": "BR"
+        },
+        "sameAs": [
+          "https://github.com/luscacid",
+          "https://linkedin.com/in/lucas-cid",
+          "https://plune.app.br",
+          "https://mywedding.app.br"
+        ],
+        "knowsAbout": [
+          "Angular",
+          "React",
+          ".NET",
+          "TypeScript",
+          "Python",
+          "PostgreSQL",
+          "Docker",
+          "Model Context Protocol",
+          "RAG",
+          "AI agents"
+        ]
+      }
+    </script>
+
+    <!-- Resolve the theme before first paint so neither the splash nor the app
+         ever flashes the wrong colours. Kept inline and synchronous on purpose. -->
+    <script>
+      ;(function () {
+        try {
+          var stored = localStorage.getItem('lc.theme')
+          var resolved =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+          document.documentElement.setAttribute('data-theme', resolved)
+          var meta = document.querySelector('meta[name="theme-color"]')
+          if (meta) meta.setAttribute('content', resolved === 'dark' ? '#08090f' : '#f6f7fc')
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark')
+        }
+      })()
+    </script>
+
+    <!-- Critical splash CSS: this is what the visitor sees while the bundle
+         downloads. It must not depend on any stylesheet that ships with JS. -->
+    <style>
+      :root {
+        --splash-bg: #f6f7fc;
+        --splash-ink: #12131c;
+        --splash-track: rgba(15, 18, 40, 0.1);
+      }
+      :root[data-theme='dark'] {
+        --splash-bg: #08090f;
+        --splash-ink: #e9eaf2;
+        --splash-track: rgba(255, 255, 255, 0.12);
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: var(--splash-bg);
+      }
+      #splash {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        background: var(--splash-bg);
+        color: var(--splash-ink);
+        font-family: ui-sans-serif, system-ui, 'Segoe UI', sans-serif;
+        transition: opacity 0.45s ease;
+      }
+      #splash[data-hidden='true'] {
+        opacity: 0;
+        pointer-events: none;
+      }
+      #splash .mark {
+        font-size: 42px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        background: linear-gradient(120deg, #4f6df5, #8b5cf6);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      #splash .track {
+        position: relative;
+        width: 168px;
+        height: 3px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: var(--splash-track);
+      }
+      #splash .track span {
+        position: absolute;
+        inset: 0;
+        width: 40%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #4f6df5, #8b5cf6);
+        animation: splash-slide 1.15s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+      }
+      #splash .label {
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        opacity: 0.55;
+      }
+      @keyframes splash-slide {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(250%);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #splash {
+          transition: none;
+        }
+        #splash .track span {
+          animation: none;
+          width: 100%;
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="splash" role="status" aria-live="polite">
+      <div class="mark">LC</div>
+      <div class="track"><span></span></div>
+      <div class="label">Carregando</div>
+    </div>
+
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+    <noscript>
+      <div style="padding: 3rem; font-family: system-ui, sans-serif">
+        <h1>Lucas Cid — Software Developer</h1>
+        <p>Este site precisa de JavaScript. Contato: lucasfelipaaa@gmail.com</p>
+      </div>
+    </noscript>
+
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

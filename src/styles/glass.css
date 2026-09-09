@@ -1,0 +1,172 @@
+/* ---------------------------------------------------------------------------
+   Liquid glass material + the animated gradient backdrop.
+   Loaded after Tailwind so these classes are plain CSS, never utilities.
+   `.glass` deliberately does NOT set border-radius: the component passes a
+   rounded-* utility, and ::before inherits whatever radius wins.
+   --------------------------------------------------------------------------- */
+
+.glass {
+  position: relative;
+  isolation: isolate;
+  background-image: linear-gradient(150deg, var(--glass-bg-1), var(--glass-bg-2));
+  backdrop-filter: blur(24px) saturate(170%);
+  -webkit-backdrop-filter: blur(24px) saturate(170%);
+  box-shadow: var(--glass-shadow), inset 0 1px 0 var(--glass-sheen);
+}
+
+/* 1px gradient hairline: blue to purple, fading into the neutral border. */
+.glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    140deg,
+    rgb(var(--brand-400) / 0.6),
+    rgb(var(--accent-400) / 0.45) 42%,
+    var(--glass-border) 72%
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Firefox with backdrop-filter disabled, and any other non-supporting engine:
+   swap the translucent fill for an opaque one so text stays readable. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass {
+    background-image: linear-gradient(150deg, var(--glass-solid-1), var(--glass-solid-2));
+  }
+}
+
+.glass-strong {
+  backdrop-filter: blur(32px) saturate(180%);
+  -webkit-backdrop-filter: blur(32px) saturate(180%);
+}
+
+.glass-subtle {
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  box-shadow: inset 0 1px 0 var(--glass-sheen);
+}
+
+/* Specular highlight that follows the pointer.
+   It is painted as an extra background layer rather than a pseudo-element:
+   backgrounds always sit under the element's own content, which sidesteps the
+   z-index fight with `isolation: isolate` above. --mx/--my are written by
+   GlassCard on pointerenter and pointermove, throttled to one rAF. */
+@property --glow {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+.glass-interactive {
+  background-image:
+    radial-gradient(
+      260px circle at var(--mx, 50%) var(--my, 50%),
+      rgb(var(--brand-400) / var(--glow, 0)),
+      rgb(var(--accent-400) / calc(var(--glow, 0) * 0.45)) 42%,
+      transparent 70%
+    ),
+    linear-gradient(150deg, var(--glass-bg-1), var(--glass-bg-2));
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    --glow 0.3s ease;
+}
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass-interactive {
+    background-image:
+      radial-gradient(
+        260px circle at var(--mx, 50%) var(--my, 50%),
+        rgb(var(--brand-400) / var(--glow, 0)),
+        transparent 70%
+      ),
+      linear-gradient(150deg, var(--glass-solid-1), var(--glass-solid-2));
+  }
+}
+
+/* Only a real pointer gets the highlight: on touch there is nothing to follow,
+   and a sticky :hover would leave the glow frozen after a tap. */
+@media (hover: hover) and (pointer: fine) {
+  .glass-interactive:hover {
+    --glow: 0.2;
+    transform: translateY(-3px);
+    box-shadow: var(--glass-shadow-hover), inset 0 1px 0 var(--glass-sheen);
+  }
+}
+
+/* --- Animated gradient backdrop ------------------------------------------- */
+
+.aurora-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: var(--aurora-opacity);
+  will-change: transform;
+}
+
+.aurora-grain {
+  position: absolute;
+  inset: 0;
+  opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.aurora-grid {
+  position: absolute;
+  inset: 0;
+  opacity: var(--grid-opacity);
+  background-image:
+    linear-gradient(to right, rgb(var(--line)) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--line)) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 60% at 50% 0%, #000 30%, transparent 75%);
+}
+
+/* --- Architecture diagram edges ------------------------------------------- */
+
+.arch-edge {
+  fill: none;
+  stroke-linecap: round;
+  transition:
+    opacity 0.3s ease,
+    stroke-width 0.3s ease;
+}
+
+.arch-edge--async {
+  stroke-dasharray: 6 6;
+  animation: flow-dash 1s linear infinite;
+}
+
+.arch-edge--p2p {
+  stroke-dasharray: 2 5;
+}
+
+/* --- Motion opt-out -------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .glass-interactive:hover {
+    transform: none;
+  }
+}
