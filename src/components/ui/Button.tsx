@@ -11,8 +11,8 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    'bg-gradient-to-r from-brand-500 to-accent-500 text-white shadow-lg shadow-brand-600/25 ' +
-    'hover:brightness-110 active:brightness-95',
+    'bg-ink text-bg shadow-lg shadow-line/10 ' +
+    'hover:opacity-90 active:opacity-80',
   glass:
     'glass rounded-full text-ink hover:text-ink [&:hover]:-translate-y-0.5 transition-transform',
   ghost: 'text-ink-muted hover:bg-line/10 hover:text-ink',

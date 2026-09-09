@@ -81,7 +81,7 @@ export function ArchitectureDiagram({
                 className={cn(
                   'rounded-full border px-3.5 py-1.5 font-mono text-xs transition',
                   active
-                    ? 'border-transparent bg-gradient-to-r from-brand-500 to-accent-500 text-white shadow'
+                    ? 'border-transparent bg-ink text-bg shadow'
                     : 'border-line/10 bg-surface/30 text-ink-muted hover:border-brand-400/40 hover:text-ink',
                 )}
               >

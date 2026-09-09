@@ -52,7 +52,7 @@ export function Hero() {
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <a
               href="#produtos"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-500 to-accent-500 px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-brand-600/25 transition hover:brightness-110 sm:text-base"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-bg shadow-lg shadow-line/10 transition hover:opacity-90 sm:text-base"
             >
               {t({ pt: 'Ver os produtos', en: 'See the products' })}
               <ArrowRight size={16} />

@@ -104,7 +104,7 @@ export function MobileMenu({ open, onClose, isHome }: MobileMenuProps) {
           <Link
             to="/cv"
             onClick={onClose}
-            className="mt-2 rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 px-3 py-3 text-center text-base font-medium text-white"
+            className="mt-2 rounded-xl bg-ink px-3 py-3 text-center text-base font-medium text-bg"
           >
             {t({ pt: 'Ver curriculo', en: 'View resume' })}
           </Link>

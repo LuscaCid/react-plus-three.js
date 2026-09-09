@@ -42,7 +42,7 @@ export default {
         'glass-lg': '1.5rem',
       },
       maxWidth: {
-        content: '72rem',
+        content: 'var(--content-w)',
       },
       keyframes: {
         'aurora-a': {

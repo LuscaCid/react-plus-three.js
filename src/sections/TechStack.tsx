@@ -12,7 +12,7 @@ export function TechStack() {
   const t = useT()
 
   return (
-    <section id="stack" className="defer-paint scroll-mt-24 py-20 sm:py-28">
+    <section id="stack" className="section-rule defer-paint scroll-mt-24 py-20 sm:py-28">
       <div className="section-shell">
         <Reveal>
           <SectionHeading
@@ -45,7 +45,7 @@ export function TechStack() {
 
             <div className="relative">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-brand-500 to-accent-500 text-white shadow-lg shadow-accent-600/30">
+                <span className="grid h-11 w-11 place-items-center rounded-2xl bg-ink text-bg shadow-lg shadow-line/10">
                   <Sparkles size={20} />
                 </span>
                 <h3 className="text-2xl font-semibold sm:text-3xl">{t(aiSection.title)}</h3>

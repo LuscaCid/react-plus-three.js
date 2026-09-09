@@ -9,7 +9,7 @@ export function Experience() {
   const t = useT()
 
   return (
-    <section id="experiencia" className="defer-paint scroll-mt-24 py-20 sm:py-28">
+    <section id="experiencia" className="section-rule defer-paint scroll-mt-24 py-20 sm:py-28">
       <div className="section-shell">
         <Reveal>
           <SectionHeading
@@ -25,7 +25,7 @@ export function Experience() {
           {/* The rail sits behind the cards and stops at the last marker. */}
           <span
             aria-hidden
-            className="absolute bottom-8 left-[15px] top-8 hidden w-px bg-gradient-to-b from-brand-500/50 via-accent-500/30 to-transparent sm:block"
+            className="absolute bottom-8 left-[15px] top-8 hidden w-px bg-gradient-to-b from-line/20 via-line/10 to-transparent sm:block"
           />
 
           {experiences.map((item, index) => (
@@ -37,7 +37,7 @@ export function Experience() {
                 <span
                   className={
                     item.current
-                      ? 'h-2.5 w-2.5 rounded-full bg-gradient-to-br from-brand-400 to-accent-400 shadow-[0_0_0_4px_rgb(var(--brand-500)/0.18)]'
+                      ? 'h-2.5 w-2.5 rounded-full bg-ink shadow-[0_0_0_4px_rgb(var(--line)/0.1)]'
                       : 'h-2 w-2 rounded-full bg-ink-subtle/60'
                   }
                 />

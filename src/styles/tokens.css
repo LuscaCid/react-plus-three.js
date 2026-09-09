@@ -2,33 +2,43 @@
    Design tokens.
    Colors live as bare RGB channels so a single Tailwind utility works in both
    themes (see tailwind.config.ts) with no `dark:` variant anywhere.
-   Composite values (glass surfaces, shadows) are full color functions because
-   their alpha is part of the material, not a utility modifier.
+   Composite values (glass surfaces, shadows, rules) are full color functions
+   because their alpha is part of the material, not a utility modifier.
+
+   The palette is monochromatic: `brand` and `accent` are two steps of the same
+   cool-grey hue, not two different colours. They keep their names so every
+   call site stays put, and so ramps that need to stay distinguishable - the
+   architecture diagram edges, for one - still have two tones to work with.
    --------------------------------------------------------------------------- */
 
 :root {
   color-scheme: light;
 
-  /* Brand - blue */
-  --brand-300: 158 176 255;
-  --brand-400: 124 140 255;
-  --brand-500: 79 109 245;
-  --brand-600: 58 82 216;
+  /* Width of the content column. The frame lines are drawn on its edges, so
+     Tailwind reads this same value for `max-w-content`. */
+  --content-w: 72rem;
 
-  /* Accent - purple */
-  --accent-300: 196 181 253;
-  --accent-400: 167 139 250;
-  --accent-500: 139 92 246;
-  --accent-600: 124 58 237;
+  /* ---- Light theme ---- */
+
+  /* Primary neutral ramp */
+  --brand-300: 168 172 184;
+  --brand-400: 118 123 138;
+  --brand-500: 74 79 94;
+  --brand-600: 44 48 60;
+
+  /* Secondary neutral ramp: same hue, one step lighter */
+  --accent-300: 196 199 208;
+  --accent-400: 152 156 168;
+  --accent-500: 104 109 124;
+  --accent-600: 68 72 86;
 
   /* Highlight, used sparingly: diagram edges and small details */
-  --beam: 34 211 238;
+  --beam: 138 143 158;
 
   --success: 21 128 61;
   --danger: 190 28 44;
 
-  /* ---- Light theme ---- */
-  --bg: 246 247 252;
+  --bg: 246 247 250;
   --bg-elev: 255 255 255;
   --surface: 255 255 255;
   --line: 15 18 40;
@@ -37,6 +47,10 @@
   --ink-muted: 78 82 108;
   --ink-subtle: 116 120 146;
 
+  /* Structural hairlines: the full-width / full-height page rules. */
+  --rule: rgb(15 18 40 / 0.1);
+  --rule-strong: rgb(15 18 40 / 0.16);
+
   --glass-bg-1: rgb(255 255 255 / 0.82);
   --glass-bg-2: rgb(255 255 255 / 0.62);
   --glass-solid-1: rgb(252 252 255);
@@ -44,11 +58,15 @@
   --glass-border: rgb(15 18 40 / 0.1);
   --glass-sheen: rgb(255 255 255 / 0.9);
   --glass-shadow: 0 18px 50px -26px rgb(15 18 40 / 0.4);
-  --glass-shadow-hover: 0 26px 64px -28px rgb(58 82 216 / 0.42);
+  --glass-shadow-hover: 0 26px 64px -28px rgb(15 18 40 / 0.3);
 
-  --aurora-opacity: 0.34;
-  --grain-opacity: 0.03;
-  --grid-opacity: 0.045;
+  /* On a near-white surface a bright specular reads as nothing, so the
+     pointer highlight is a faint darkening instead. */
+  --glass-glow: 15 18 40;
+  --glow-strength: 0.07;
+
+  --aurora-opacity: 0.26;
+  --grain-opacity: 0.035;
 }
 
 /* Fallback for a viewer whose JS never ran: honour the OS preference,
@@ -56,6 +74,18 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
     color-scheme: dark;
+
+    --brand-300: 222 224 232;
+    --brand-400: 176 180 194;
+    --brand-500: 126 131 146;
+    --brand-600: 92 97 112;
+
+    --accent-300: 198 201 212;
+    --accent-400: 146 150 165;
+    --accent-500: 100 105 120;
+    --accent-600: 72 77 92;
+
+    --beam: 158 163 178;
 
     --bg: 8 9 15;
     --bg-elev: 13 15 23;
@@ -66,6 +96,9 @@
     --ink-muted: 162 166 188;
     --ink-subtle: 122 126 148;
 
+    --rule: rgb(255 255 255 / 0.11);
+    --rule-strong: rgb(255 255 255 / 0.18);
+
     --glass-bg-1: rgb(26 29 44 / 0.76);
     --glass-bg-2: rgb(15 17 27 / 0.6);
     --glass-solid-1: rgb(22 25 38);
@@ -73,11 +106,13 @@
     --glass-border: rgb(255 255 255 / 0.1);
     --glass-sheen: rgb(255 255 255 / 0.14);
     --glass-shadow: 0 24px 60px -30px rgb(0 0 0 / 0.8);
-    --glass-shadow-hover: 0 30px 70px -30px rgb(124 140 255 / 0.35);
+    --glass-shadow-hover: 0 30px 70px -30px rgb(0 0 0 / 0.9);
 
-    --aurora-opacity: 0.34;
+    --glass-glow: 255 255 255;
+    --glow-strength: 0.16;
+
+    --aurora-opacity: 0.22;
     --grain-opacity: 0.05;
-    --grid-opacity: 0.06;
   }
 }
 
@@ -85,6 +120,18 @@
    concrete value, so this block is what actually drives the dark theme. */
 :root[data-theme='dark'] {
   color-scheme: dark;
+
+  --brand-300: 222 224 232;
+  --brand-400: 176 180 194;
+  --brand-500: 126 131 146;
+  --brand-600: 92 97 112;
+
+  --accent-300: 198 201 212;
+  --accent-400: 146 150 165;
+  --accent-500: 100 105 120;
+  --accent-600: 72 77 92;
+
+  --beam: 158 163 178;
 
   --bg: 8 9 15;
   --bg-elev: 13 15 23;
@@ -95,6 +142,9 @@
   --ink-muted: 162 166 188;
   --ink-subtle: 122 126 148;
 
+  --rule: rgb(255 255 255 / 0.11);
+  --rule-strong: rgb(255 255 255 / 0.18);
+
   --glass-bg-1: rgb(26 29 44 / 0.76);
   --glass-bg-2: rgb(15 17 27 / 0.6);
   --glass-solid-1: rgb(22 25 38);
@@ -102,9 +152,11 @@
   --glass-border: rgb(255 255 255 / 0.1);
   --glass-sheen: rgb(255 255 255 / 0.14);
   --glass-shadow: 0 24px 60px -30px rgb(0 0 0 / 0.8);
-  --glass-shadow-hover: 0 30px 70px -30px rgb(124 140 255 / 0.35);
+  --glass-shadow-hover: 0 30px 70px -30px rgb(0 0 0 / 0.9);
 
-  --aurora-opacity: 0.34;
+  --glass-glow: 255 255 255;
+  --glow-strength: 0.16;
+
+  --aurora-opacity: 0.22;
   --grain-opacity: 0.05;
-  --grid-opacity: 0.06;
 }

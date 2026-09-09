@@ -37,7 +37,7 @@ export function ThemeToggle({ className }: { className?: string }) {
             className={cn(
               'grid h-8 w-8 place-items-center rounded-full transition',
               active
-                ? 'bg-gradient-to-br from-brand-500 to-accent-500 text-white shadow'
+                ? 'bg-ink text-bg shadow'
                 : 'text-ink-subtle hover:text-ink',
             )}
           >

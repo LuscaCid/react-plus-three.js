@@ -29,7 +29,7 @@ export function Header() {
     <>
       <a
         href="#conteudo"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-sm focus:text-white"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-sm focus:text-bg"
       >
         {t({ pt: 'Pular para o conteudo', en: 'Skip to content' })}
       </a>
@@ -51,7 +51,7 @@ export function Header() {
               to="/"
               className="flex items-center gap-2.5 rounded-full pl-1 pr-3 font-semibold tracking-tight"
             >
-              <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 text-sm font-bold text-white shadow-lg shadow-brand-600/25">
+              <span className="grid h-9 w-9 place-items-center rounded-xl bg-ink text-sm font-bold text-bg shadow-lg shadow-line/10">
                 {profile.initials}
               </span>
               <span className="hidden sm:inline">{profile.name}</span>
@@ -74,7 +74,7 @@ export function Header() {
               <ThemeToggle className="hidden sm:inline-flex" />
               <Link
                 to="/cv"
-                className="hidden rounded-full bg-gradient-to-r from-brand-500 to-accent-500 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-brand-600/25 transition hover:brightness-110 md:inline-flex"
+                className="hidden rounded-full bg-ink px-4 py-2 text-sm font-medium text-bg shadow-lg shadow-line/10 transition hover:opacity-90 md:inline-flex"
               >
                 {t({ pt: 'Curriculo', en: 'Resume' })}
               </Link>

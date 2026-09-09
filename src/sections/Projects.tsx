@@ -10,7 +10,7 @@ export function Projects() {
   const t = useT()
 
   return (
-    <section id="projetos" className="defer-paint scroll-mt-24 py-20 sm:py-28">
+    <section id="projetos" className="section-rule defer-paint scroll-mt-24 py-20 sm:py-28">
       <div className="section-shell">
         <Reveal>
           <SectionHeading

@@ -50,12 +50,18 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-brand-400 via-accent-400 to-brand-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-br from-ink via-ink to-ink-muted bg-clip-text text-transparent;
+  }
+
+  /* Full-viewport-width hairline on a section's top edge. Sections are
+     full-bleed blocks - only .section-shell inside them is constrained - so
+     the border runs edge to edge for free. */
+  .section-rule {
+    border-top: 1px solid var(--rule);
   }
 
   .chip {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-line/10 bg-surface/40 px-3 py-1
-           font-mono text-[0.7rem] uppercase tracking-wide text-ink-muted;
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line/10 bg-surface/40 px-3 py-1 font-mono text-[0.7rem] uppercase tracking-wide text-ink-muted;
   }
 }
 
@@ -110,6 +116,10 @@
     -webkit-backdrop-filter: none !important;
     box-shadow: none !important;
     border: 0 !important;
+  }
+
+  .section-rule {
+    border-top: 0 !important;
   }
 
   .print-hide {

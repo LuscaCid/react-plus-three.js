@@ -37,7 +37,7 @@ export function CvPage() {
         <button
           type="button"
           onClick={() => window.print()}
-          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-500 to-accent-500 px-5 py-2.5 text-sm font-medium text-white shadow-lg shadow-brand-600/25 transition hover:brightness-110"
+          className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-bg shadow-lg shadow-line/10 transition hover:opacity-90"
         >
           <Printer size={15} />
           {t({ pt: 'Baixar em PDF', en: 'Download as PDF' })}

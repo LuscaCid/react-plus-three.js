@@ -110,7 +110,7 @@ export function Contact() {
   }
 
   return (
-    <section id="contato" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="contato" className="section-rule scroll-mt-24 py-20 sm:py-28">
       <div className="section-shell">
         <Reveal>
           <SectionHeading
@@ -220,7 +220,7 @@ export function Contact() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-brand-500 to-accent-500 px-6 py-3 text-sm font-medium text-white shadow-lg shadow-brand-600/25 transition hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-medium text-bg shadow-lg shadow-line/10 transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
                   >
                     {loading && <Loader2 size={16} className="animate-spin" />}
                     {loading

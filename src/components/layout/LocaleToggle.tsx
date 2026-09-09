@@ -32,7 +32,7 @@ export function LocaleToggle({ className }: { className?: string }) {
             className={cn(
               'rounded-full px-2.5 py-1 font-mono text-xs transition',
               active
-                ? 'bg-gradient-to-br from-brand-500 to-accent-500 text-white shadow'
+                ? 'bg-ink text-bg shadow'
                 : 'text-ink-subtle hover:text-ink',
             )}
           >

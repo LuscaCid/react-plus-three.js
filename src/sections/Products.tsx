@@ -12,7 +12,7 @@ export function Products() {
   const t = useT()
 
   return (
-    <section id="produtos" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="produtos" className="section-rule scroll-mt-24 py-20 sm:py-28">
       <div className="section-shell">
         <Reveal>
           <SectionHeading
