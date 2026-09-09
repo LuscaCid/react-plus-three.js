@@ -2,6 +2,7 @@ import type { Localized } from '@/lib/types'
 
 export const profile = {
   name: 'Lucas Cid',
+  company: 'LUCIDEV',
   initials: 'LC',
   role: {
     pt: 'Software Developer',

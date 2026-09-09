@@ -53,6 +53,13 @@ export function Footer() {
             </p>
           </div>
         </div>
+
+        {/* Maker's mark: sits outside the glass card, under the work it signs.
+            The trailing letter-space of the last character would push the
+            wordmark off-centre, so the text-indent pays it back. */}
+        <p className="mt-6 text-center font-mono text-[0.7rem] uppercase tracking-[0.35em] text-ink-muted [text-indent:0.35em]">
+          {profile.company}
+        </p>
       </div>
     </footer>
   )
